@@ -9,7 +9,7 @@ consumer = KafkaConsumer('keyed_topic', bootstrap_servers='localhost:9092',
 counter = 0
 
 for message in consumer:
-    print(f"Received {message.value.decode('utf-8')} from partition {message.partition}")
+    print(f"Received {message.value.decode('utf-8')} from partition {message.partition} at offset {message.offset}")
     
     # Process the message (in this demo, we're just printing it)
     # After processing, we commit the offset
