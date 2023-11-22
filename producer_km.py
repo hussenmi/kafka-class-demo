@@ -2,7 +2,7 @@ from kafka import KafkaProducer
 
 producer = KafkaProducer(bootstrap_servers='localhost:9092', acks='all')
 
-for i in range(9):  # Sending 30 messages
+for i in range(9):  # Sending 9 messages
     key = f"key_{i % 3}".encode('utf-8')  # This will produce three unique keys: key_0, key_1, and key_2
     message = f"message {i} with {key.decode('utf-8')}".encode('utf-8')
     future = producer.send('keyed_topic', key=key, value=message)
