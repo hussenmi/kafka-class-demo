@@ -9,6 +9,7 @@ Before running the scripts, ensure the following:
 
 - If you are on a Windows/Mac, make sure Docker Desktop is running
 - Install a Python client for Apache Kafka using pip: `pip install kafka-python`. Recommended to do it in a virtual environment
+- Make the shell files executable by running the command: `chmod +x [name of file]`. Eg., `chmod +x reset_kafka.sh`
 
 ## Docker-Compose File Overview
 
