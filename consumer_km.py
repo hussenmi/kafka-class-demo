@@ -7,3 +7,4 @@ for message in consumer:
     print(f"Received message with key {key}: {message.value.decode('utf-8')} from partition {message.partition}")
 
 consumer.close()
+

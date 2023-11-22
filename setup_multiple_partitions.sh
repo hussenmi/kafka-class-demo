@@ -11,7 +11,7 @@ docker volume prune -f
 docker-compose -f docker-compose.yml up -d
 
 # Step 4: Wait for Kafka to start up. You might need to adjust the sleep time.
-sleep 30
+sleep 10
 
 # Step 5: Create a topic with multiple partitions using Kafka's command-line tool inside the Docker container
 docker exec -it kafka-class-demo-kafka-1 /opt/kafka/bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 3 --topic keyed_topic

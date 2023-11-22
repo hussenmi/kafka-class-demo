@@ -15,3 +15,4 @@ echo "Starting Kafka and Zookeeper..."
 docker-compose -f docker-compose.yml up -d
 
 echo "Reset complete. Kafka is ready for a fresh start."
+

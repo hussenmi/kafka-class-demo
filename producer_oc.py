@@ -4,7 +4,7 @@ from kafka import KafkaProducer
 producer = KafkaProducer(bootstrap_servers='localhost:9092', acks='all')
 
 # Number of messages to produce
-num_messages = 30
+num_messages = 9
 
 # Set of keys to cycle through to interleave messages across partitions
 keys = ["key1", "key2", "key3"]

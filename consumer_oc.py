@@ -16,7 +16,7 @@ for message in consumer:
     consumer.commit()
     
     counter += 1
-    if counter >= 10:  # Stop after processing 10 messages
+    if counter >= 3:  # Stop after processing 3 messages
         break
 
 consumer.close()
