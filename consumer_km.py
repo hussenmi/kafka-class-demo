@@ -4,7 +4,7 @@ consumer = KafkaConsumer('keyed_topic', bootstrap_servers='localhost:9092', auto
 
 for message in consumer:
     key = message.key.decode('utf-8') if message.key else None
-    print(f"Received message with key {key}: {message.value.decode('utf-8')} from partition {message.partition}")
+    print(f"Received {message.value.decode('utf-8')} from partition {message.partition} at offset {message.offset}")
 
 consumer.close()
 
